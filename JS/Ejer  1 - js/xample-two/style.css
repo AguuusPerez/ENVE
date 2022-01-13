@@ -5,3 +5,162 @@
     box-sizing: border-box;
     list-style: none;
 }
+
+:root{
+    --font:'Outfit', sans-serif;
+    --Cyan: #cae5f3;
+    --V-Brown: #271a1e;
+    --V-Orange: #da523c;
+    --V-Cream: #f5f3f3;
+    --V-Mustard: #f7c937;
+    --V-Pink: #f8bde6;
+    --V-gray:  #9c939a;
+    --V-gg: #c0a7b2;
+    --white: #ffff;
+} 
+
+body{
+    font-family: var(--font);
+}
+
+.main-container{
+    width: 100vw;
+    /* height: 98vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #643f4b;
+    
+}
+
+.exercise-card{
+    width: 920px;
+    /*height: 98vh;*/
+    background-color:rgb(255, 255, 255);
+     border-radius: 60px;
+    /* border-radius: 50px; */
+    margin-bottom: 25px;
+    margin-top: 25px;
+    
+}
+
+.exercise-card-img{
+    display: flex;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.exercise-card-ilustration{
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    border-radius: 1090px;
+}
+
+.exercise-card-resolutions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right:15px;
+    padding-left: 15px;
+}
+
+.title-container{
+    text-align: center;
+}
+
+.title{
+    font-size: 20px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container-points{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 90px;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.paragraph{
+    font-size: 20px;
+}
+
+/* .btn{
+    display: inline-block;
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    outline: none;
+    border: 1px solid black;
+    color: #000;
+    background: none;
+    position: relative;    
+} */
+
+.btn{
+    background: none;
+    font-weight: bold;
+    border: 1px solid black;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    min-width: 130px;
+    height: 40px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    
+}
+
+
+
+.btn:hover {
+    color: var(--V-Orange);
+}
+
+
+.btn::before{
+    content: "";
+    
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--V-Orange);
+   
+}
+
+
+/* 
+.btn:after {
+    content: "";
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 5px;
+    left: 5px;
+    transition: 0.2s;
+    background-color: #ffe566;
+} */
+
+.attribution { 
+    
+    font-size: 15px; 
+    text-align: center;
+    background: var(--white);
+}
+
+.attribution a { 
+    color: var(--V-Orange); 
+}
