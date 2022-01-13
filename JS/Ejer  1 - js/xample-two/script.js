@@ -173,3 +173,49 @@ function orderNumber(){
 
 let btn7 = document.getElementById('exercise7');
 btn7.addEventListener("click", orderNumber);
+
+
+
+//-------------------------------------------------------------------------
+
+function inputData(){
+  
+  let name = prompt("Ingrese su nombre: ");
+  let apellido = prompt("Ingrese su apellido: ");
+  let dni = prompt("Ingrese su DNI: ");
+  let dniEsPar = {};  // booleano: true o false. No se si declararlo boolean, o definir directamente si es truo o false? 
+  let nombreCompleto = {};
+
+
+  let data = {};                 //  Guardar info que ingresa el usuario
+  data.name = {name};            
+  data.apellido = {apellido};
+  data.dni = {dni};  
+
+
+  if (dni % 2 == 0){              // Al finalizar la carga, agregar un nuevo campo “dniEsPar” (booleano) si el dni es par o no
+    alert(`El DNI numero ${dni} es par!`);    
+  }else{
+    alert(`El DNI numero ${dni} es impar!`);
+  }
+
+
+  data.dniEsPar = {dniEsPar};    // Agregando campo dniEsPar
+  
+
+  delete data.name;              // Eliminar el campo nombre y apellido
+  delete data.apellido;
+
+
+  data.nombreCompleto = {name,apellido};  // crear un nuevo campo “nombreCompleto”
+
+
+  let dataJson = JSON.stringify(data.nombreCompleto);     // Me devuelve nombre + apellido 
+  alert(dataJson);
+
+  console.log(typeof(dataJson));
+
+}
+
+let btn8 = document.getElementById('exercise8');
+btn8.addEventListener("click", inputData);

@@ -29,18 +29,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #643f4b;
+    background-color: var(--V-Brown);
+    /* background-color: #643f4b; */
+    
     
 }
 
 .exercise-card{
     width: 920px;
     /*height: 98vh;*/
-    background-color:rgb(255, 255, 255);
+    background-color: #f8f8ff;
      border-radius: 60px;
     /* border-radius: 50px; */
     margin-bottom: 25px;
     margin-top: 25px;
+    -webkit-box-shadow: 17px 8px 30px -12px rgba(255,255,255,0.73);
+-moz-box-shadow: 17px 8px 30px -12px rgba(255,255,255,0.73);
+box-shadow: 17px 8px 30px -12px rgba(255,255,255,0.73);
     
 }
 
@@ -118,26 +123,35 @@ body{
     min-width: 130px;
     height: 40px;
     cursor: pointer;
-    transition: color 0.4s linear;
+    transition: color 0.3s linear;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 3px #95a5a6;
     
 }
 
 
 
 .btn:hover {
-    color: var(--V-Orange);
+    color: var(--V-Cream);
+    background-color: var(--V-Orange);
+    
+}
+
+.btn:active{
+    background: #dd7e6f;
+    color: black;
+    /* box-shadow: 0 5px #95a5a6; */
 }
 
 
 .btn::before{
-    content: "";
-    
+    content: "";    
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: var(--V-Orange);
-   
+    background: var(--V-Orange);  
 }
 
 
@@ -154,13 +168,14 @@ body{
     background-color: #ffe566;
 } */
 
-.attribution { 
-    
+
+.footer {     
     font-size: 15px; 
     text-align: center;
     background: var(--white);
 }
 
-.attribution a { 
+.footer a { 
     color: var(--V-Orange); 
 }
+
